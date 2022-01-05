@@ -23,6 +23,8 @@ function RenderCampsite(props) {
 
     const {campsite} = props;
 
+    const view = React.createRef();
+
     const recognizeDrag = ({dx}) => (dx < -200) ? true : false;
 
     const panResponder = PanResponder.create({
@@ -58,6 +60,7 @@ function RenderCampsite(props) {
                 animation='fadeInDown'
                 duration={2000}
                 delay={1000}
+                ref={view}
                 {...panResponder.panHandlers}>
                 <Card
                     featuredTitle={campsite.name}
@@ -81,7 +84,7 @@ function RenderCampsite(props) {
                             type='font-awesome'
                             color='#5637DD'
                             raised
-                            reverse
+                            reversert
                             onPress={() => props.onShowModal()}
                         />
                     </View>
