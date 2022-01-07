@@ -13,7 +13,7 @@ import * as Animatable from 'react-native-animatable';
 const mapStateToProps = state => {
     return {
         campsites: state.campsites,
-        favorites: state.favorites
+        favorites: state.favorites,
     };
 };
 
